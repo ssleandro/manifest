@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://github.com" name="github"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="ssh://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+
+  <default remote="ossystems" revision="InvalidRevision" sync-j="4"/>
+
+  <project name="apps/ye" path="sources/ye" revision="master"/>
+  <project name="bitbake" path="sources/bitbake" remote="oe" revision="1.36"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="rocko"/>
+  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="rocko"/>
+  <project name="meta-ti" path="sources/meta-ti" remote="yocto" revision="rocko"/>
+  <project name="openembedded-core" path="sources/openembedded-core" revision="rocko"/>
+  <project name="ossystems-yocto-base-scripts" path="sources/base" revision="rocko">
+    <copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+  <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="master"/>
+  <project name="inobram/smaai5/yocto-config" path="sources/conf/tools" revision="master"/>
+  <project name="inobram/smaai5/yocto-platform" path="sources/conf/repo" revision="master"/>
+</manifest>
