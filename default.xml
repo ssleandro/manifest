@@ -19,4 +19,6 @@
   <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="master"/>
   <project name="inobram/smaai5/yocto-config" path="sources/conf/tools" revision="master"/>
   <project name="inobram/smaai5/yocto-platform" path="sources/conf/repo" revision="master"/>
+
+  <project remote="github" revision="rocko" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
 </manifest>
