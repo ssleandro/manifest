@@ -4,21 +4,19 @@
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="ssh://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-
+  
   <default remote="ossystems" revision="InvalidRevision" sync-j="4"/>
-
-  <project name="apps/ye" path="sources/ye" revision="master"/>
-  <project name="bitbake" path="sources/bitbake" remote="oe" revision="1.36"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="rocko"/>
-  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="rocko"/>
-  <project name="openembedded-core" path="sources/openembedded-core" revision="rocko"/>
-  <project name="ossystems-yocto-base-scripts" path="sources/base" revision="rocko">
+  
+  <project name="UpdateHub/meta-updatehub" path="sources/meta-updatehub" remote="github" revision="a76a1798c4c855a6927b46527b959c6728879620" upstream="rocko"/>
+  <project name="apps/ye" path="sources/ye" revision="e469cac4b385d331bd488da230b3c0465413381b" upstream="master"/>
+  <project name="bitbake" path="sources/bitbake" remote="oe" revision="223a0f68530571d2280f526bddbc718fa803a3dc" upstream="1.36"/>
+  <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="49504c59beee5e282e467f1673faf59664a86822" upstream="master"/>
+  <project name="inobram/smaai5/yocto-config" path="sources/conf/tools" revision="a8efef8735581552b4fd2e2b6257258649fb997a" upstream="master"/>
+  <project name="inobram/smaai5/yocto-platform" path="sources/conf/repo" revision="d87e1f5a744b8d878b067e1265efa09f873af376" upstream="master"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="dacfa2b1920e285531bec55cd2f08743390aaf57" upstream="rocko"/>
+  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="4bac5ea64961d91454cce2b02d0b3ede6fd3c51b" upstream="rocko"/>
+  <project name="openembedded-core" path="sources/openembedded-core" revision="1b18cdf6b8bdb00ff5df165b9ac7bc2b10c87d57" upstream="rocko"/>
+  <project name="ossystems-yocto-base-scripts" path="sources/base" revision="03b82723c054c69712de67cfe5194a6384b91694" upstream="rocko">
     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
-
-  <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="master"/>
-  <project name="inobram/smaai5/yocto-config" path="sources/conf/tools" revision="master"/>
-  <project name="inobram/smaai5/yocto-platform" path="sources/conf/repo" revision="master"/>
-
-  <project remote="github" revision="rocko" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
 </manifest>
