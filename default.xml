@@ -7,18 +7,24 @@
 
   <default remote="ossystems" revision="InvalidRevision" sync-j="4"/>
 
-  <project name="apps/ye" path="sources/ye" revision="master"/>
-  <project name="bitbake" path="sources/bitbake" remote="oe" revision="1.40"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="thud"/>
-  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="thud"/>
-  <project name="openembedded-core" path="sources/openembedded-core" revision="thud"/>
-  <project name="ossystems-yocto-base-scripts" path="sources/base" revision="thud">
+  <!-- OpenEmbedded Layers -->
+  <project name="bitbake" path="sources/bitbake" remote="oe" revision="1.44"/>
+  <project name="openembedded-core" path="sources/openembedded-core" revision="zeus"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="zeus"/>
+
+  <!-- OS Systems Layers -->
+  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="zeus"/>
+  <project name="ossystems-yocto-base-scripts" path="sources/base" revision="zeus">
     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
+  <project name="apps/ye" path="sources/ye" revision="master"/>
+
+  <!-- UpdateHub Layer -->
+  <project remote="github" revision="zeus" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
+
+  <!-- Inobram Layer -->
   <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="6.1.x"/>
   <project name="inobram/smaai5/yocto-config" path="sources/conf/tools" revision="6.1.x"/>
   <project name="inobram/smaai5/yocto-platform" path="sources/conf/repo" revision="6.1.x"/>
-
-  <project remote="github" revision="thud" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
 </manifest>
