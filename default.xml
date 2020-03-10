@@ -4,20 +4,30 @@
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="ssh://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  
+
   <default remote="ossystems" revision="InvalidRevision" sync-j="4"/>
-  
-  <project name="UpdateHub/meta-updatehub" path="sources/meta-updatehub" remote="github" revision="c1a3a455e1f689dc8b97a316623bff201d531076" upstream="zeus"/>
-  <project name="apps/ye" path="sources/ye" revision="e469cac4b385d331bd488da230b3c0465413381b" upstream="master"/>
-  <project name="bitbake" path="sources/bitbake" remote="oe" revision="6836184ef5220488a1127413c7d2e523fc37e2e9" upstream="1.44"/>
-  <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="ba2010ac0732a7fbea55fca332ddae84ddd66606" upstream="6.1.x"/>
-  <project name="inobram/smaai5/yocto-config" path="sources/conf/tools" revision="a8efef8735581552b4fd2e2b6257258649fb997a" upstream="6.1.x"/>
-  <project name="inobram/smaai5/yocto-platform" path="sources/conf/repo" revision="a13f49735583ce608fb6e8ce44988508cb00d444" upstream="6.1.x"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="bb65c27a772723dfe2c15b5e1b27bcc1a1ed884c" upstream="zeus"/>
-  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="426d1d42256e1d6697e9baa209828173aa8fdca3" upstream="zeus"/>
-  <project name="openembedded-core" path="sources/openembedded-core" revision="c78140941f8a98e013932023a63501ba3b7e975a" upstream="zeus"/>
-  <project name="ossystems-yocto-base-scripts" path="sources/base" revision="19f3e7a6ae4c83e2cde64ff6cec8310580a74013" upstream="zeus">
+
+  <!-- OpenEmbedded Layers -->
+  <project name="bitbake" path="sources/bitbake" remote="oe" revision="1.44"/>
+  <project name="openembedded-core" path="sources/openembedded-core" revision="zeus"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="zeus"/>
+
+  <!-- OS Systems Layers -->
+  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="zeus"/>
+  <project name="ossystems-yocto-base-scripts" path="sources/base" revision="zeus">
     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="shellhub-io/meta-shellhub" path="sources/meta-shellhub" remote="github" revision="a9ee208d6a017ecd0e32211eaa494fafb2bdaddb" upstream="master"/>
+
+  <project name="apps/ye" path="sources/ye" revision="master"/>
+
+  <!-- UpdateHub Layer -->
+  <project remote="github" revision="zeus" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
+
+  <!-- ShellHub layer -->
+  <project remote="github" revision="master" name="shellhub-io/meta-shellhub" path="sources/meta-shellhub"/>
+
+  <!-- Inobram Layer -->
+  <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="6.1.x"/>
+  <project name="inobram/smaai5/yocto-config" path="sources/conf/tools" revision="6.1.x"/>
+  <project name="inobram/smaai5/yocto-platform" path="sources/conf/repo" revision="6.1.x"/>
 </manifest>
