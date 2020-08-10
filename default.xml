@@ -29,6 +29,10 @@
   <!-- Qt5 Layer -->
   <project remote="github" revision="dunfell" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
 
+  <!-- Freescale BSP components -->
+  <project remote="github" revision="dunfell" name="Freescale/meta-freescale" path="sources/meta-freescale"/>
+  <project remote="github" revision="dunfell" name="Freescale/meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+
   <!-- Inobram Layer -->
   <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="master"/>
   <project name="inobram/smaai5/yocto-platform" path="sources/platform" revision="master"/>
