@@ -52,6 +52,7 @@ def __after_init_inobram_yocto():
                         'meta-openembedded/meta-networking',
                         'meta-openembedded/meta-oe',
                         'meta-openembedded/meta-python',
+                        'meta-openembedded/meta-webserver',
                         'meta-qt5',
                         'meta-smaai5',
                     ]])
