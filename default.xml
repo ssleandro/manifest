@@ -25,7 +25,7 @@
   <project remote="github" revision="master" name="rust-embedded/meta-rust-bin" path="sources/meta-rust-bin"/>
 
   <!-- ShellHub layer -->
-  <project remote="github" revision="7e9a5209414a38c935f3d4bc02c15340cf3a4037" name="shellhub-io/meta-shellhub" path="sources/meta-shellhub"/>
+  <project remote="github" revision="e1f155e6c034251f56a7621c00c5e7be6d770428" name="shellhub-io/meta-shellhub" path="sources/meta-shellhub"/>
 
   <!-- Qt5 Layer -->
   <project remote="github" revision="dunfell" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
