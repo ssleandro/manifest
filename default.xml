@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github" fetch="https://github.com"/>
-  <remote name="oe" fetch="https://git.openembedded.org"/>
-  <remote name="ossystems" fetch="ssh://code.ossystems.com.br" review="code.ossystems.com.br"/>
-  <remote name="yocto" fetch="https://git.yoctoproject.org"/>
-  
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="https://git.openembedded.org" name="oe"/>
+  <remote fetch="ssh://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
+  <remote fetch="https://git.yoctoproject.org" name="yocto"/>
+
   <default remote="ossystems" revision="InvalidRevision" sync-j="4"/>
-  
-  <project name="Freescale/meta-freescale" path="sources/meta-freescale" remote="github" revision="c4347b507c2ba0d7eb3917303f83631244bf5048" upstream="dunfell" dest-branch="dunfell"/>
-  <project name="Freescale/meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty" remote="github" revision="88773cbb6367496b1a2ddca683afcd352be3cd58" upstream="dunfell" dest-branch="dunfell"/>
-  <project name="UpdateHub/meta-updatehub" path="sources/meta-updatehub" remote="github" revision="3728d25c5aeb7428ca88dc5438249747cd9fec6b" upstream="dunfell" dest-branch="dunfell"/>
-  <project name="apps/ye" path="sources/ye" revision="0921b2ee825016597a14c371cc670d1b4e3ce93b" upstream="master" dest-branch="master"/>
-  <project name="bitbake" path="sources/bitbake" remote="oe" revision="048d682b031644fb9f0d41a489bacb873aa27bd7" upstream="1.46" dest-branch="1.46"/>
-  <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="f87d92d5bf0fa5df0401c22dc380676474fbe6a7" upstream="master" dest-branch="master"/>
-  <project name="inobram/smaai5/yocto-platform" path="sources/platform" revision="48a5f08090cb374a5459181e3cd20e21c2c5f138" upstream="master" dest-branch="master"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="6792ebdd966aa0fb662989529193a0940fbfee00" upstream="dunfell" dest-branch="dunfell"/>
-  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="b5b98a937c94b0b2bab7df7a21593180e40e00c1" upstream="dunfell" dest-branch="dunfell"/>
-  <project name="meta-qt5/meta-qt5" path="sources/meta-qt5" remote="github" revision="5ef3a0ffd3324937252790266e2b2e64d33ef34f" upstream="dunfell" dest-branch="dunfell"/>
-  <project name="openembedded-core" path="sources/openembedded-core" remote="oe" revision="c9a9d5a1f7fbe88422ccee542a89afbc4c5336e4" upstream="dunfell" dest-branch="dunfell"/>
-  <project name="ossystems-yocto-base-scripts" path="sources/base" revision="5ff85b35193f1f5c5ea45dc1f962e2acc2cc0d2b" upstream="dunfell" dest-branch="dunfell">
-    <copyfile src="setup-environment" dest="setup-environment"/>
+
+  <!-- OpenEmbedded Layers -->
+  <project name="bitbake" path="sources/bitbake" remote="oe" revision="1.46"/>
+  <project name="openembedded-core" path="sources/openembedded-core" remote="oe" revision="dunfell"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="dunfell"/>
+
+  <!-- OS Systems Layers -->
+  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="dunfell"/>
+  <project name="ossystems-yocto-base-scripts" path="sources/base" revision="dunfell">
+    <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="rust-embedded/meta-rust-bin" path="sources/meta-rust-bin" remote="github" revision="09a3952f641d345965a0252cbc74aec04e78ceee" upstream="master" dest-branch="master"/>
-  <project name="shellhub-io/meta-shellhub" path="sources/meta-shellhub" remote="github" revision="e1f155e6c034251f56a7621c00c5e7be6d770428"/>
+
+  <project name="apps/ye" path="sources/ye" revision="master"/>
+
+  <!-- UpdateHub Layer -->
+  <project remote="github" revision="dunfell" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
+  <project remote="github" revision="master" name="rust-embedded/meta-rust-bin" path="sources/meta-rust-bin"/>
+
+  <!-- ShellHub layer -->
+  <project remote="github" revision="e1f155e6c034251f56a7621c00c5e7be6d770428" name="shellhub-io/meta-shellhub" path="sources/meta-shellhub"/>
+
+  <!-- Qt5 Layer -->
+  <project remote="github" revision="dunfell" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
+
+  <!-- Freescale BSP components -->
+  <project remote="github" revision="dunfell" name="Freescale/meta-freescale" path="sources/meta-freescale"/>
+  <project remote="github" revision="dunfell" name="Freescale/meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+
+  <!-- Inobram Layer -->
+  <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="master"/>
+  <project name="inobram/smaai5/yocto-platform" path="sources/platform" revision="master"/>
 </manifest>
