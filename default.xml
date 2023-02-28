@@ -35,6 +35,6 @@
   <project remote="github" revision="dunfell" name="Freescale/meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
 
   <!-- Inobram Layer -->
-  <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="master"/>
-  <project name="inobram/smaai5/yocto-platform" path="sources/platform" revision="master"/>
+  <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="7.0.x"/>
+  <project name="inobram/smaai5/yocto-platform" path="sources/platform" revision="7.0.x"/>
 </manifest>
