@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch="https://github.com" name="github"/>
-  <remote fetch="https://git.openembedded.org" name="oe"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
   <remote fetch="ssh://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
-  <remote fetch="https://git.yoctoproject.org" name="yocto"/>
 
   <default remote="ossystems" revision="InvalidRevision" sync-j="4"/>
 
   <!-- OpenEmbedded Layers -->
-  <project name="bitbake" path="sources/bitbake" remote="oe" revision="1.46"/>
-  <project name="openembedded-core" path="sources/openembedded-core" remote="oe" revision="dunfell"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="dunfell"/>
+  <project remote="oe" name="bitbake" path="sources/bitbake" revision="1.46"/>
+  <project remote="oe" name="openembedded-core" path="sources/openembedded-core" revision="dunfell"/>
+  <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded" revision="dunfell"/>
 
   <!-- OS Systems Layers -->
   <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="dunfell"/>
