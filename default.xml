@@ -4,36 +4,34 @@
   <remote fetch="https://github.com/openembedded" name="oe"/>
   <remote fetch="ssh://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
 
-  <default remote="ossystems" revision="InvalidRevision" sync-j="4"/>
+  <default revision="kirkstone" sync-j="4"/>
 
   <!-- OpenEmbedded Layers -->
-  <project remote="oe" name="bitbake" path="sources/bitbake" revision="1.46"/>
-  <project remote="oe" name="openembedded-core" path="sources/openembedded-core" revision="dunfell"/>
-  <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded" revision="dunfell"/>
+  <project remote="oe" revision="2.0" name="bitbake" path="sources/bitbake"/>
+  <project remote="oe" name="openembedded-core" path="sources/openembedded-core"/>
+  <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <!-- OS Systems Layers -->
-  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" revision="dunfell"/>
-  <project name="ossystems-yocto-base-scripts" path="sources/base" revision="dunfell">
+  <project remote="github" revision="master" name="OSSystemsEmbeddedLinux/ye" path="sources/ye"/>
+  <project remote="github" name="OSSystemsEmbeddedLinux/meta-ossystems-base" path="sources/meta-ossystems-base"/>
+  <project remote="github" revision="master" name="OSSystemsEmbeddedLinux/ossystems-yocto-base-scripts" path="sources/base">
     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project name="apps/ye" path="sources/ye" revision="master"/>
-
   <!-- UpdateHub Layer -->
-  <project remote="github" revision="dunfell" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
-  <project remote="github" revision="master" name="rust-embedded/meta-rust-bin" path="sources/meta-rust-bin"/>
+  <project remote="github" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
 
   <!-- ShellHub layer -->
-  <project remote="github" revision="e1f155e6c034251f56a7621c00c5e7be6d770428" name="shellhub-io/meta-shellhub" path="sources/meta-shellhub"/>
+  <project remote="github" revision="master" name="shellhub-io/meta-shellhub" path="sources/meta-shellhub"/>
 
   <!-- Qt5 Layer -->
-  <project remote="github" revision="dunfell" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
+  <project remote="github" name="meta-qt5/meta-qt5" path="sources/meta-qt5"/>
 
   <!-- Freescale BSP components -->
-  <project remote="github" revision="dunfell" name="Freescale/meta-freescale" path="sources/meta-freescale"/>
-  <project remote="github" revision="dunfell" name="Freescale/meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="github" name="Freescale/meta-freescale" path="sources/meta-freescale"/>
+  <project remote="github" name="Freescale/meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
 
   <!-- Inobram Layer -->
-  <project name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5" revision="7.0.x"/>
-  <project name="inobram/smaai5/yocto-platform" path="sources/platform" revision="7.0.x"/>
+  <project remote="ossystems" revision="master" name="inobram/smaai5/meta-smaai5" path="sources/meta-smaai5"/>
+  <project remote="ossystems" revision="master" name="inobram/smaai5/yocto-platform" path="sources/platform"/>
 </manifest>
