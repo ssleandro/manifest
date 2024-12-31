@@ -3,7 +3,7 @@
   <remote fetch="https://github.com" name="github"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
   <remote fetch="ssh://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
-  <remote fetch="https://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@github.com" name="meu"/>
+  <remote fetch="https://github.com" name="meu"/>
 
   <default revision="kirkstone" sync-j="4"/>
 
@@ -33,6 +33,6 @@
   <project remote="github" name="Freescale/meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
 
   <!-- Inobram Layer -->
-  <project remote="meu" revision="master" name="ssleandro/meta-munters" path="sources/meta-smaai5"/>
+  <project remote="meu" revision="master" name="ssleandro/meta-bbb" path="sources/meta-smaai5"/>
   <project remote="meu" revision="master" name="ssleandro/manifest" path="sources/platform"/>
 </manifest>
